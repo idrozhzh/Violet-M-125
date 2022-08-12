@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		B39D173A28A5617F00FB81A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D173928A5617F00FB81A5 /* AppDelegate.swift */; };
 		B39D173C28A5617F00FB81A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D173B28A5617F00FB81A5 /* SceneDelegate.swift */; };
-		B39D173E28A5617F00FB81A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D173D28A5617F00FB81A5 /* ViewController.swift */; };
+		B39D173E28A5617F00FB81A5 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D173D28A5617F00FB81A5 /* WelcomeViewController.swift */; };
 		B39D174128A5617F00FB81A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B39D173F28A5617F00FB81A5 /* Main.storyboard */; };
 		B39D174328A5618100FB81A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B39D174228A5618100FB81A5 /* Assets.xcassets */; };
 		B39D174628A5618100FB81A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B39D174428A5618100FB81A5 /* LaunchScreen.storyboard */; };
+		B39D175228A5678400FB81A5 /* WelcomeScreenSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D175128A5678400FB81A5 /* WelcomeScreenSlide.swift */; };
+		B39D175428A569A700FB81A5 /* WelcomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D175328A569A700FB81A5 /* WelcomeCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B39D173628A5617F00FB81A5 /* Violet M-125.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Violet M-125.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B39D173928A5617F00FB81A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B39D173B28A5617F00FB81A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B39D173D28A5617F00FB81A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B39D173D28A5617F00FB81A5 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		B39D174028A5617F00FB81A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B39D174228A5618100FB81A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B39D174528A5618100FB81A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B39D174728A5618100FB81A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B39D175128A5678400FB81A5 /* WelcomeScreenSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreenSlide.swift; sourceTree = "<group>"; };
+		B39D175328A569A700FB81A5 /* WelcomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 			isa = PBXGroup;
 			children = (
 				B39D173828A5617F00FB81A5 /* Violet M-125 */,
+				B39D174228A5618100FB81A5 /* Assets.xcassets */,
 				B39D173728A5617F00FB81A5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,15 +61,48 @@
 		B39D173828A5617F00FB81A5 /* Violet M-125 */ = {
 			isa = PBXGroup;
 			children = (
-				B39D173928A5617F00FB81A5 /* AppDelegate.swift */,
-				B39D173B28A5617F00FB81A5 /* SceneDelegate.swift */,
-				B39D173D28A5617F00FB81A5 /* ViewController.swift */,
-				B39D173F28A5617F00FB81A5 /* Main.storyboard */,
-				B39D174228A5618100FB81A5 /* Assets.xcassets */,
-				B39D174428A5618100FB81A5 /* LaunchScreen.storyboard */,
-				B39D174728A5618100FB81A5 /* Info.plist */,
+				B39D175028A5676C00FB81A5 /* Models */,
+				B39D174F28A5627C00FB81A5 /* ViewControllers */,
+				B39D174E28A5627200FB81A5 /* Storyboards */,
+				B39D174D28A5619100FB81A5 /* App */,
 			);
 			path = "Violet M-125";
+			sourceTree = "<group>";
+		};
+		B39D174D28A5619100FB81A5 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B39D173928A5617F00FB81A5 /* AppDelegate.swift */,
+				B39D173B28A5617F00FB81A5 /* SceneDelegate.swift */,
+				B39D174728A5618100FB81A5 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B39D174E28A5627200FB81A5 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B39D173F28A5617F00FB81A5 /* Main.storyboard */,
+				B39D174428A5618100FB81A5 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B39D174F28A5627C00FB81A5 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B39D173D28A5617F00FB81A5 /* WelcomeViewController.swift */,
+				B39D175328A569A700FB81A5 /* WelcomeCollectionViewCell.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B39D175028A5676C00FB81A5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B39D175128A5678400FB81A5 /* WelcomeScreenSlide.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +121,8 @@
 			dependencies = (
 			);
 			name = "Violet M-125";
+			packageProductDependencies = (
+			);
 			productName = "Violet M-125";
 			productReference = B39D173628A5617F00FB81A5 /* Violet M-125.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +151,8 @@
 				Base,
 			);
 			mainGroup = B39D172D28A5617F00FB81A5;
+			packageReferences = (
+			);
 			productRefGroup = B39D173728A5617F00FB81A5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +180,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B39D173E28A5617F00FB81A5 /* ViewController.swift in Sources */,
+				B39D175228A5678400FB81A5 /* WelcomeScreenSlide.swift in Sources */,
+				B39D173E28A5617F00FB81A5 /* WelcomeViewController.swift in Sources */,
 				B39D173A28A5617F00FB81A5 /* AppDelegate.swift in Sources */,
+				B39D175428A569A700FB81A5 /* WelcomeCollectionViewCell.swift in Sources */,
 				B39D173C28A5617F00FB81A5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,7 +333,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DUXW7U8H93;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Violet M-125/Info.plist";
+				INFOPLIST_FILE = "Violet M-125/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -304,7 +348,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,7 +361,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DUXW7U8H93;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Violet M-125/Info.plist";
+				INFOPLIST_FILE = "Violet M-125/App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -332,7 +376,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
