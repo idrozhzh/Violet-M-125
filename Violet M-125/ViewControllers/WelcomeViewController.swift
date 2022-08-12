@@ -37,22 +37,23 @@ class WelcomeViewController: UIViewController {
         ]
     }
 }
-//MARK: extentions
+//MARK: extensions
 extension WelcomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         welcomeScreens.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-       if let cell = collectionView.dequeueReusableCell(
+       let cell = collectionView.dequeueReusableCell(
                 withReuseIdentifier: WelcomeCollectionViewCell.identifier,
                 for: indexPath
-       ) as? WelcomeCollectionViewCell {
+       ) as! WelcomeCollectionViewCell
            cell.setup(welcomeScreens[indexPath.row])
            return cell
-       } else {
-           let cell = UICollectionViewCell()
-           return cell
-       }
+       
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
     }
 }
