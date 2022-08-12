@@ -37,8 +37,8 @@ class WelcomeViewController: UIViewController {
         ]
     }
 }
-
-extension WelcomeViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+//MARK: extentions
+extension WelcomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         welcomeScreens.count
     }
