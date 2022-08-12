@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B355A6EC28A6EC7600A73A83 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B355A6EB28A6EC7600A73A83 /* NetworkManager.swift */; };
+		B355A6EE28A6F1A800A73A83 /* CryptoMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B355A6ED28A6F1A800A73A83 /* CryptoMessage.swift */; };
+		B355A6F028A6F51B00A73A83 /* CryptoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B355A6EF28A6F51B00A73A83 /* CryptoViewController.swift */; };
+		B355A6F228A6F54500A73A83 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B355A6F128A6F54500A73A83 /* MainViewController.swift */; };
 		B39D173A28A5617F00FB81A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D173928A5617F00FB81A5 /* AppDelegate.swift */; };
 		B39D173C28A5617F00FB81A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D173B28A5617F00FB81A5 /* SceneDelegate.swift */; };
 		B39D173E28A5617F00FB81A5 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39D173D28A5617F00FB81A5 /* WelcomeViewController.swift */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B355A6EB28A6EC7600A73A83 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B355A6ED28A6F1A800A73A83 /* CryptoMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoMessage.swift; sourceTree = "<group>"; };
+		B355A6EF28A6F51B00A73A83 /* CryptoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoViewController.swift; sourceTree = "<group>"; };
+		B355A6F128A6F54500A73A83 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B39D173628A5617F00FB81A5 /* Violet M-125.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Violet M-125.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B39D173928A5617F00FB81A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B39D173B28A5617F00FB81A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B355A6EA28A6EC2700A73A83 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B355A6EB28A6EC7600A73A83 /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		B39D172D28A5617F00FB81A5 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +77,7 @@
 		B39D173828A5617F00FB81A5 /* Violet M-125 */ = {
 			isa = PBXGroup;
 			children = (
+				B355A6EA28A6EC2700A73A83 /* Services */,
 				B39D175028A5676C00FB81A5 /* Models */,
 				B39D174F28A5627C00FB81A5 /* ViewControllers */,
 				B39D174E28A5627200FB81A5 /* Storyboards */,
@@ -92,6 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				B39D173D28A5617F00FB81A5 /* WelcomeViewController.swift */,
+				B355A6F128A6F54500A73A83 /* MainViewController.swift */,
+				B355A6EF28A6F51B00A73A83 /* CryptoViewController.swift */,
 				B39D175328A569A700FB81A5 /* WelcomeCollectionViewCell.swift */,
 			);
 			path = ViewControllers;
@@ -101,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				B39D175128A5678400FB81A5 /* WelcomeScreenSlide.swift */,
+				B355A6ED28A6F1A800A73A83 /* CryptoMessage.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -180,9 +200,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B355A6EC28A6EC7600A73A83 /* NetworkManager.swift in Sources */,
 				B39D175228A5678400FB81A5 /* WelcomeScreenSlide.swift in Sources */,
 				B39D173E28A5617F00FB81A5 /* WelcomeViewController.swift in Sources */,
 				B39D173A28A5617F00FB81A5 /* AppDelegate.swift in Sources */,
+				B355A6EE28A6F1A800A73A83 /* CryptoMessage.swift in Sources */,
+				B355A6F028A6F51B00A73A83 /* CryptoViewController.swift in Sources */,
+				B355A6F228A6F54500A73A83 /* MainViewController.swift in Sources */,
 				B39D175428A569A700FB81A5 /* WelcomeCollectionViewCell.swift in Sources */,
 				B39D173C28A5617F00FB81A5 /* SceneDelegate.swift in Sources */,
 			);
