@@ -71,7 +71,7 @@ extension WelcomeViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let width = view.frame.width - 32
+        let width = view.frame.width
         currentPage = Int(scrollView.contentOffset.x / width)
     }
     
