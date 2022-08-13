@@ -27,7 +27,7 @@ class CryptoViewController: UIViewController {
         if manipulationTextField.text != "" {
             cryptoMessage.data = manipulationTextField.text ?? ""
             
-            if keyTextField.text == "" {
+            if keyTextField.text == "" || keyTextField.text == nil {
                 NetworkManager.shared.fetchGeneratedKey { [weak self] result in
                     switch result {
                     case .success(let key):
@@ -37,7 +37,9 @@ class CryptoViewController: UIViewController {
                         }
                     case .failure(let error):
                         print(error.localizedDescription)
-                        self?.showAlert(with: "Введите ключ для шифровки вашего сообщения")
+                        DispatchQueue.main.async { [weak self] in
+                            self?.showAlert(with: "Введите ключ для шифровки вашего сообщения")
+                        }
                     }
                 }
             } else {
@@ -54,24 +56,28 @@ class CryptoViewController: UIViewController {
                 
                 switch cryptoData {
                 case .success(let cryptoMessage):
-                    DispatchQueue.main.async {
+                    DispatchQueue.main.async { [weak self] in
                         self?.manipulationTextField.text = (cryptoMessage as? CryptoMessage)?.data
                     }
                 case .failure(let error):
                     print(error.localizedDescription)
-                    self?.showAlert(with: "Произошла ошибка при попытке зашифровать сообщение, повторите попытку позже")
+                    DispatchQueue.main.async { [weak self] in
+                        self?.showAlert(with: "Произошла ошибка при попытке зашифровать сообщение, повторите попытку позже")
+                    }
                 }
             }
         case .decryption:
             NetworkManager.shared.postMessage(with: cryptoMessage, to: Link.postDecrypt.rawValue) { [weak self] cryptoData in
                 switch cryptoData {
                 case .success(let cryptoMessage):
-                    DispatchQueue.main.async {
+                    DispatchQueue.main.async { [weak self] in
                         self?.manipulationTextField.text = (cryptoMessage as? CryptoMessage)?.data
                     }
                 case .failure(let error):
                     print(error.localizedDescription)
-                    self?.showAlert(with: "Произошла ошибка при попытке зашифровать сообщение, повторите попытку позже")
+                    DispatchQueue.main.async { [weak self] in
+                        self?.showAlert(with: "Произошла ошибка при попытке зашифровать сообщение, повторите попытку позже")
+                    }
                 }
             }
         }
