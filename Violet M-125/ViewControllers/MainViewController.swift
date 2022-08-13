@@ -12,7 +12,6 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        print(NetworkManager.shared.pingServer())
         
         // Do any additional setup after loading the view.
     }

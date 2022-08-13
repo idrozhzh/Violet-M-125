@@ -5,11 +5,16 @@
 //  Created by Иван Дрожжин on 12.08.2022.
 //
 
-struct CryptoMessage {
-    let data: String
-    let key: String
+struct CryptoMessage: Codable {
+    var data: String
+    var key: String
 }
 
-struct Key {
-    let key: String
+struct Pressmark: Codable {
+    var key: String
+}
+
+enum WorkingMode: String {
+    case encryption = "encrypt"
+    case decryption = "decrypt"
 }
