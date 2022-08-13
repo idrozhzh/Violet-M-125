@@ -26,7 +26,9 @@ class NetworkManager {
     
     private init() {}
     
-    func postMessage(with data: CryptoMessage, to url: String, completion: @escaping(Result<Any, NetworkError>) -> Void) {
+    func postMessage(with data: CryptoMessage,
+                     to url: String,
+                     completion: @escaping(Result<Any, NetworkError>) -> Void) {
         guard let url = URL(string: url) else { return }
         
         guard let cryptoData = try? JSONEncoder().encode(data) else {
@@ -39,12 +41,11 @@ class NetworkManager {
         request.httpBody = cryptoData
         
         URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data, let response = response else {
+            guard let data = data else {
                 completion(.failure(.noData))
                 print(error?.localizedDescription ?? "No error description")
                 return
             }
-            print(response)
             do {
                 let jsonData = try JSONSerialization.jsonObject(with: data)
                 completion(.success(jsonData))
@@ -72,7 +73,6 @@ class NetworkManager {
             } catch {
                 completion(.failure(.decodingError))
             }
-
         }.resume()
     }
 }

@@ -14,11 +14,7 @@ class CryptoViewController: UIViewController {
     @IBOutlet weak var manipulationTextField: UITextField!
     @IBOutlet weak var keyTextField: UITextField!
     @IBOutlet weak var descriptionLabel: UILabel!
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+    //Лишние аутлеты будут реализованы в логике позже, в зависимости от нажатой кнопки будут открываться экраны с данными для шифровки или дешифровки
     
     @IBAction func cryptoButtonPressed() {
         var cryptoKey = Pressmark(key: "")
